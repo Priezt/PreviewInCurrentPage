@@ -1,0 +1,30 @@
+{
+	"name": "PreviewInCurrentPage",
+	"version": "1.0",
+	"description": "Help to preview target link in current page",
+	"permissions": [
+		"http://*/*",
+		"https://*/*",
+		"tabs"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"http://*/*",
+				"https://*/*"
+			],
+			"js": [
+				"lib/jquery-1.6.1.min.js",
+				"lib/ztoolkit.js",
+				"content_main.js"
+			]
+		}
+	],
+	"background_page": "background.html",
+	"options_page": "options.html",
+	"icons": {
+		"128": "img/icon128.png",
+		"16": "img/icon16.png",
+		"48": "img/icon48.png"
+	}
+}
